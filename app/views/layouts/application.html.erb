@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ruby</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body id="page1">
+<div class="wrap"><div class="ic"><!-- HLinks --></div>
+	 <!-- header -->
+	 <header>
+			<div class="container">
+				 <%= render :partial => 'memberships/logo' %>
+				 <%= render :partial => 'memberships/menu' %>
+				 <%= render :partial => 'memberships/category' %>
+				
+				 <div class="tab_container">
+						<%= render :partial => 'memberships/imageslider' %>
+						
+							</div>
+	 </header>
+	 <div class="container">
+			<!-- aside -->
+			<aside>
+				 <div class="inside">
+						<%= render :partial => 'memberships/myclients' %>
+				 </div>
+			</aside>
+			<!-- content -->
+			<section id="content">
+				 <div class="wrapper">
+						<article class="col-1">
+							
+							 <img src="<%= asset_path '1page-img.jpg' %>" class="img-indent">
+							<%= yield %>
+						</article>
+						<article class="col-2">
+							<%= render :partial => 'memberships/freshnews' %>
+						</article>
+				 </div>
+			</section>
+	 </div>
+</div>
+<!-- footer -->
+<footer>
+	 <div class="container">
+			<div class="inside"> <a rel="nofollow" href="http://www.templatemonster.com" class="new_window">Website template</a> designed by TemplateMonster.com<br>
+				 <a href="http://www.templates.com/product/3d-models/" class="new_window">3D Models</a> provided by Templates.com<br>
+            <!-- VLinks --></div>
+	 </div>
+</footer>
+<script type="text/javascript"> Cufon.now(); </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<nav>
+<ul>
+<li><a href="/home/index" class="active"><span><span>Home</span></span></a></li>
+<li><a href="/memberships/why"><span><span>WhytoJoin</span></span></a></li>
+<li><a href="/products"><span><span>Products</span></span></a></li>
+<li><a href="/galleries/photo"><span><span>Gallery</span></span></a></li>
+<li>
+<% if user_signed_in? %>
+  <li>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+  </li>
+<% else %>
+  <li>
+  <%= link_to('Login', new_user_session_path)  %>  
+  </li>
+<% end %>
+</li>
+<li><a href="#"><span><span>Shop</span></span></a></li>
+<li><a href="/contacts/new"><span><span>Contact</span></span></a></li>
+</ul>
+</nav>

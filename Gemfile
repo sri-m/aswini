@@ -5,7 +5,7 @@ gem 'rails', '4.0.2'
 gem 'devise'
 #gem 'spree', github: 'spree/spree', branch: '2-1-stable'
 # Use mysql as the database for Active Record
-#gem 'mysql2'
+gem 'mysql2'
 #gem 'thin'
 gem 'will_paginate'
 # Use SCSS for stylesheets
